@@ -1,0 +1,76 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Notes list styling */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between; /* puts content and buttons on opposite sides */
+    align-items: center;
+}
+
+/* Note content container */
+.note-content {
+    max-width: 70%;
+}
+
+/* Buttons container */
+.note-actions a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.note-actions a:hover {
+    text-decoration: underline;
+}

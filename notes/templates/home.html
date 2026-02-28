@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'notes/style.css' %}">
+<head>
+    <title>My Notes</title>
+</head>
+
+<body>
+    <h1>My Notes</h1>
+
+    <!-- Add Note Form -->
+    <h2>Add a note</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }} 
+        <button type="submit">Add Note</button>
+    </form>
+
+    <hr>
+
+    <!-- Notes List -->
+    <ul>
+    {% for note in notes %}
+    <li>
+        <div class="note-content">
+            <strong>{{ note.title }}</strong><br>
+            {{ note.content }}<br>
+            <em>{{ note.created_at }}</em>
+        </div>
+        <div class="note-actions">
+            <a href="{% url 'edit_note' note.id %}">Edit</a> |
+            <a href="{% url 'delete_note' note.id %}">Delete</a>
+        </div>
+    </li>
+    {% empty %}
+    <li>No notes yet!</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
