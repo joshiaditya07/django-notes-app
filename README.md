@@ -1,6 +1,6 @@
 # Django Notes App
 
-A simple CRUD Notes Application built using Django.
+A simple CRUD Notes Application, mostly useful for students built using Django .
 
 ## Features
 - Add Notes
